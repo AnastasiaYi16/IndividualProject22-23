@@ -1,7 +1,7 @@
 clear all
 
-TrainOginRoot = 'U:\Creative\dataset_REDS\groundtruth\val_sharp';
-OutputRoot = 'U:\Creative\dataset_REDS\Synthetic_LowLightLowResolution\REDS\val';
+TrainOginRoot = './TrackingNet-devkit/data';
+OutputRoot = './data';
 mkdir(OutputRoot);
 
 totalSeq = 30;
