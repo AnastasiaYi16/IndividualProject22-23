@@ -23,22 +23,22 @@ DATA:
     NUMBER: 2
   TRAIN:
     DATASETS_NAME:
-    - GOT10K_vottrain
+    # - GOT10K_vottrain
     - LASOT
-    - COCO17
-    - TRACKINGNET
+    # - COCO17
+    # - TRACKINGNET
     DATASETS_RATIO:
+    # - 1
     - 1
-    - 1
-    - 1
-    - 1
+    # - 1
+    # - 1
     SAMPLE_PER_EPOCH: 60000
-  VAL:
-    DATASETS_NAME:
-    - GOT10K_votval
-    DATASETS_RATIO:
-    - 1
-    SAMPLE_PER_EPOCH: 10000
+  # VAL:
+  #   DATASETS_NAME:
+  #   - GOT10K_votval
+  #   DATASETS_RATIO:
+  #   - 1
+  #   SAMPLE_PER_EPOCH: 10000
 MODEL:
   BACKBONE:
     PRETRAINED: true
@@ -101,17 +101,17 @@ TEST:
   TEMPLATE_SIZE: 128
   UPDATE_INTERVALS:
     LASOT: [200]
-    UAV: [200]
-    OTB: [6]
-    GOT10K_TEST: [10]
-    TRACKINGNET: [25]
-    VOT20: [10]
+    # UAV: [200]
+    # OTB: [6]
+    # GOT10K_TEST: [10]
+    # TRACKINGNET: [25]
+    # VOT20: [10]
 #    VOT20LT: [200]
   ONLINE_SIZES:
     LASOT: [2]
-    UAV: [1]
-    OTB: [3]
-    GOT10K_TEST: [2]
-    TRACKINGNET: [1]
-    VOT20: [5]
+    # UAV: [1]
+    # OTB: [3]
+    # GOT10K_TEST: [2]
+    # TRACKINGNET: [1]
+    # VOT20: [5]
 #    VOT20LT: [3]

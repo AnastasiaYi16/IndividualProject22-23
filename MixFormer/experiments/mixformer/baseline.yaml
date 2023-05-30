@@ -22,25 +22,25 @@ DATA:
   TRAIN:
     DATASETS_NAME:
     - GOT10K_vottrain
-    - LASOT
-    - COCO17
-    - TRACKINGNET
+    # - LASOT
+    # - COCO17
+    # - TRACKINGNET
     DATASETS_RATIO:
+    # - 1
     - 1
-    - 1
-    - 1
-    - 1
-    SAMPLE_PER_EPOCH: 60000
+    # - 1
+    # - 1
+    SAMPLE_PER_EPOCH: 100 #60000
   VAL:
     DATASETS_NAME:
     - GOT10K_votval
     DATASETS_RATIO:
     - 1
-    SAMPLE_PER_EPOCH: 10000
+    SAMPLE_PER_EPOCH: 100 #10000
 MODEL:
   BACKBONE:
     PRETRAINED: True
-    PRETRAINED_PATH: '/YOUR/PRETRAINED/CVT/DIR/CvT-21-384x384-IN-22k.pth' #'/home/cyt/project/CvtT/models/CvT-21-384x384-IN-22k.pth'
+    PRETRAINED_PATH: '/user/work/lm20690/project/IndividualProject22-23/MixFormer/pretrain/CvT-21-384x384-IN-22k.pth' #'/home/cyt/project/CvtT/models/CvT-21-384x384-IN-22k.pth'
     INIT: 'trunc_norm'
     NUM_STAGES: 3
     PATCH_SIZE: [ 7, 3, 3 ]
@@ -72,7 +72,7 @@ TRAIN:
   BACKBONE_MULTIPLIER: 0.1
   BATCH_SIZE: 8  # 8 for 2080ti (maybe 10), 32 for tesla V100(32 G)
   DEEP_SUPERVISION: false
-  EPOCH: 500
+  EPOCH: 10 #500
   GIOU_WEIGHT: 2.0
   GRAD_CLIP_NORM: 0.1
   L1_WEIGHT: 5.0
@@ -93,8 +93,8 @@ TEST:
   TEMPLATE_FACTOR: 2.0
   TEMPLATE_SIZE: 128
   UPDATE_INTERVALS:
-    LASOT: [200]
+    # LASOT: [200]
     GOT10K_TEST: [200]
-    TRACKINGNET: [25]
-    VOT20: [10]
-    VOT20LT: [200]
+    # TRACKINGNET: [25]
+    # VOT20: [10]
+    # VOT20LT: [200]
